@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,WONK@9..144,700,1&family=Montserrat:wght@100..900&display=swap" rel="stylesheet">
+    
+    <title>Frontend Mentor | Product preview card component</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      html, body, main {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        color: hsl(158, 36%, 37%);
+      }
+      main {
+        background: hsl(30, 38%, 92%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      article {
+        width: 327px;
+        background: hsl(0, 0%, 100%);
+        border-radius: 0.5rem;
+        overflow: hidden;
+        box-shadow: rgba(0,0,0,0.5) 0px 0px 20px;
+      }
+      article div.container {
+        padding: 1rem;
+      }
+      article header p {
+        font-family: 'Montserrat', serif;
+        font-size: 14px;
+        font-weight: 500;
+        text-transform: uppercase;
+        letter-spacing: 0.2rem;
+        margin: 0;
+      }
+      article header h1 { color: #000; }
+      article header h1,
+      article div.price span.current {
+        font-family: 'Fraunces', serif;
+        font-weight: 700;
+        font-size: 30px;
+        margin: 1rem 0;
+      }
+      article div.price {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+      }
+      article div.price span.original {
+        font-family: 'Montserrat', serif;
+        font-size: 14px;
+        font-weight: 500;
+      }
+      article img {
+        max-width: 100%;
+      }
+      article img.desktop {
+        display: none;
+      }
+      article p.description {
+        font-family: 'Montserrat', serif;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 1.5rem;
+      }
+      article button {
+        background: hsl(158, 36%, 37%);
+        border: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        padding: 1rem;
+        gap: 0.5rem;
+        color: #fff;
+        font-weight: 700;
+        border-radius: 0.5rem;
+      }
+      article button:active {
+        background: hsl(212, 21%, 14%);
+      }
+      article button img {
+        width: 1rem;
+      }
+
+      @media (min-width: 700px) {
+        article {
+          display: flex;
+          width: 600px;
+        }
+        article div.img-container {
+          flex: 1 1 0;
+        }
+        article div.txt-container {
+          flex: 1 1 0;
+        }
+        article div.container {
+          padding: 2.3rem;
+        }
+        article img.mobile {
+          display: none;
+        }
+        article img.desktop {
+          display: block;
+        }
+        article header h1 {
+          line-height: 1.9rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <article>
+        <div class="img-container">
+          <img class="mobile" src="./images/image-product-mobile.jpg" alt="perfume" />
+          <img class="desktop" src="./images/image-product-desktop.jpg" alt="perfume" />
+        </div>
+        <div class="txt-container">
+          <div class="container">
+            <header>
+              <p>Perfume</p>
+              <h1>Gabrielle Essence Eau De Parfum</h1>
+            </header>
+            <p class="description">
+              A floral, solar and voluptuous interpretation composed by Olivier Polge, Perfumer-Creator for the House of CHANEL.
+            </p>
+            <div class="price">
+              <span class="current">$149.99</span>
+              <span class="original"><s>$169.99</s></span>
+            </div>
+            <button>
+              <img src="./images/icon-cart.svg" alt="Add to Cart" />
+              Add to Cart
+            </button>
+          </div>
+        </div>
+      </article>
+    </main>
+  </body>
+</html>
