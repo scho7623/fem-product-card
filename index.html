@@ -64,11 +64,10 @@
         font-size: 14px;
         font-weight: 500;
       }
-      article img {
+      article picture img {
         max-width: 100%;
-      }
-      article img.desktop {
-        display: none;
+        height: 100%;
+        display: block;
       }
       article p.description {
         font-family: 'Montserrat', serif;
@@ -110,12 +109,6 @@
         article div.container {
           padding: 2.3rem;
         }
-        article img.mobile {
-          display: none;
-        }
-        article img.desktop {
-          display: block;
-        }
         article header h1 {
           line-height: 1.9rem;
         }
@@ -126,8 +119,10 @@
     <main>
       <article>
         <div class="img-container">
-          <img class="mobile" src="./images/image-product-mobile.jpg" alt="perfume" />
-          <img class="desktop" src="./images/image-product-desktop.jpg" alt="perfume" />
+          <picture>
+            <source media="(min-width: 700px)" srcset="./images/image-product-desktop.jpg" />
+            <img src="./images/image-product-mobile.jpg" alt="perfume" />
+          </picture>
         </div>
         <div class="txt-container">
           <div class="container">
@@ -143,7 +138,7 @@
               <span class="original"><s>$169.99</s></span>
             </div>
             <button>
-              <img src="./images/icon-cart.svg" alt="Add to Cart" />
+              <img src="./images/icon-cart.svg" alt="Shopping cart icon" />
               Add to Cart
             </button>
           </div>
